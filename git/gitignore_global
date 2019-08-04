@@ -1,0 +1,9 @@
+# vscode configuration folder
+.vscode
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Vim swap files
+*.swp
