@@ -1,0 +1,6 @@
+[submodule "shell/oh-my-zsh"]
+	path = shell/oh-my-zsh
+	url = git@github.com:sigilioso/oh-my-zsh.git
+[submodule "vim"]
+	path = vim
+	url = git@github.com:sigilioso/.vim.git
