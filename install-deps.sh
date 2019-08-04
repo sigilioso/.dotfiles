@@ -23,7 +23,9 @@ install_zsh() {
 }
 
 install_fzf() {
-    wget https://raw.githubusercontent.com/junegunn/fzf/master/install -O /tmp/install-fzf && chmod +x /tmp/install-fzf && /tmp/install-fzf
+    fzf_dir=$HOME/.fzf
+    mkdir -p $fzf_dir
+    wget https://raw.githubusercontent.com/junegunn/fzf/master/install -O $fzf_dir/install-fzf && chmod +x $fzf_dir/install-fzf && $fzf_dir/install-fzf
 }
 
 install_ag() {
