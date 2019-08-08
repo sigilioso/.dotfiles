@@ -1,11 +1,12 @@
-# TODO: install dependencies
-
 # TODO: doc in readme
-
 
 git submodule update --init --recursive
 
 source ./install-deps.sh
+
+install_zsh
+install_fzf
+install_ag
 
 echo "Installing fonts..."
 sh install-fonts.sh
