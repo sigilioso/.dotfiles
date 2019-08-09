@@ -17,4 +17,4 @@
 [merge]
 	tool = vimdiff
 [core]
-	excludesfile = ${HOME}/.gitignore_global
+	excludesfile = ~/.gitignore_global
