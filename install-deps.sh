@@ -50,3 +50,8 @@ install_ag() {
     fi
   fi
 }
+
+install_autojump() {
+  if [ -z "$(command -v autojump)" ]; then
+    git clone git://github.com/wting/autojump.git /tmp/autojump && cd /tmp/autojump && python install.py
+  fi

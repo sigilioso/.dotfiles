@@ -7,6 +7,7 @@ source ./install-deps.sh
 install_zsh
 install_fzf
 install_ag
+install_autojump
 
 echo "Installing fonts..."
 sh install-fonts.sh

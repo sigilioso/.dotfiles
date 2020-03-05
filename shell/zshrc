@@ -62,6 +62,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+#
+
+# Autojump installed see: https://github.com/wting/autojump
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+autoload -Uz compinit && compinit
+autoload -U bashcompinit && bashcompinit
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -69,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git common-aliases colored-man-pages docker
+    git common-aliases colored-man-pages docker autojump
 )
 
 source $ZSH/oh-my-zsh.sh
