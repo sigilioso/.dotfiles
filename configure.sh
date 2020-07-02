@@ -1,5 +1,4 @@
 #!/bin/bash
-# TODO: doc in readme
 git submodule update --init --recursive
 
 source ./install-deps.sh
