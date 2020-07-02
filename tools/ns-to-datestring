@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+from datetime import datetime
+
+if __name__ == "__main__":
+    try:
+        ns = float(sys.argv[1])
+        print(datetime.fromtimestamp(ns / 1e9))
+    except Exception as e:
+        print("Invalid argument", e)
