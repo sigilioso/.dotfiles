@@ -12,6 +12,7 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     undo-commit = reset --soft HEAD^
     clean-br = "!f(){ git branch --merged |egrep -v '(develop|master)'|xargs git branch -d;};f"
+    remote-branches-to-local = "!f(){ for i in `git branch -a | grep remote | grep -v HEAD | grep -v master`; do git branch --track ${i#remotes/origin/} $i; done };f"
 [diff]
 	tool = vimdiff
 [merge]
