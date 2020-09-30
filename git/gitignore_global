@@ -11,3 +11,6 @@ Desktop.ini
 # dev files
 *.pyc
 modd.conf
+# autoenv files
+.in
+.out

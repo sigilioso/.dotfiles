@@ -83,6 +83,7 @@ plugins=(
     copydir
     encode64
     zsh-autosuggestions
+    autoenv
 )
 
 source $ZSH/oh-my-zsh.sh
