@@ -25,6 +25,10 @@ echo "Setting up vim config..."
 [ ! -e $HOME/.vim ] && ln -sf $dotfiles_dir/vim $HOME/.vim
 vim -c "PlugInstall"
 
+# link nvim config
+echo "Setting up neovim config..."
+[ ! -e $HOME/.config/nvim/init.vim ] && mkdir -p $HOME/.config/nvim && ln -sf $dotfiles_dir/nvim/init.vim $HOME/.config/nvim/init.vim
+
 # .git configuration
 echo "Setting up git config..."
 [ ! -e $HOME/.gitignore_global ] && ln -sf $dotfiles_dir/git/gitignore_global $HOME/.gitignore_global
