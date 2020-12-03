@@ -3,13 +3,7 @@ set packpath+=~/.vim
 if !exists('g:vscode')
     source ~/.vim/vimrc
 endif
-" vscode neovim settings
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
-set tabstop=4
-set sw=4
+" vscode neovim settings (small set from in .vim/vimrc)
 if has("macunix")
     set clipboard=unnamed
 else
