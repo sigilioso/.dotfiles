@@ -7,7 +7,7 @@ endif
 if has("macunix")
     set clipboard=unnamed
 else
-    set clipboard=unnamedplus
+    set clipboard=unnamedplus " requires xclip in ubuntu
 endif
 "Set leader to ,
 :let mapleader = ","
