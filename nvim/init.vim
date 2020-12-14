@@ -1,6 +1,6 @@
-set runtimepath+=~/.vim,~/.vim/after
-set packpath+=~/.vim
 if !exists('g:vscode')
+    set runtimepath+=~/.vim,~/.vim/after
+    set packpath+=~/.vim
     source ~/.vim/vimrc
 endif
 " vscode neovim settings
