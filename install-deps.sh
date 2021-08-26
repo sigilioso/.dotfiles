@@ -35,8 +35,6 @@ install_fzf() {
 install_ag() {
   # Test to see if ag is installed
   if [ -z "$(command -v ag)" ]; then
-    # If zsh isn't installed, get the platform of the current machine and
-    # install zsh with the appropriate package manager.
     platform=$(uname);
     if [[ $platform == 'Linux' ]]; then
       if [[ -f /etc/redhat-release ]]; then
@@ -54,5 +52,38 @@ install_ag() {
 install_autojump() {
   if [ -z "$(command -v autojump)" ]; then
     git clone git://github.com/wting/autojump.git /tmp/autojump && cd /tmp/autojump && python install.py
+  fi
+}
+
+install_ripgrep() {
+  # Test to see if rpgrep is installed
+  if [ -z "$(command -v rg)" ]; then
+    platform=$(uname);
+    if [[ $platform == 'Linux' ]]; then
+      if [[ -f /etc/redhat-release ]]; then
+        sudo yum install ripgrep
+      fi
+      if [[ -f /etc/debian_version ]]; then
+        sudo apt-get install ripgrep
+      fi
+    elif [[ $platform == 'Darwin' ]]; then
+      brew install ripgrep
+    fi
+  fi
+}
+
+install_bat() {
+  if [ -z "$(command -v bat)" ]; then
+    platform=$(uname);
+    if [[ $platform == 'Linux' ]]; then
+      if [[ -f /etc/redhat-release ]]; then
+        sudo yum install bat
+      fi
+      if [[ -f /etc/debian_version ]]; then
+        sudo apt-get install bat
+      fi
+    elif [[ $platform == 'Darwin' ]]; then
+      brew install bat
+    fi
   fi
 }

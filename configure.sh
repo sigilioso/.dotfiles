@@ -7,6 +7,7 @@ install_zsh
 install_fzf
 install_ag
 install_autojump
+install_ripgrep
 
 echo "Installing fonts..."
 sh install-fonts.sh
