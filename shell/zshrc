@@ -130,3 +130,5 @@ if [ -f ~/.zsh_profile ]; then
     source ~/.zsh_profile
 fi
 export PATH=$PATH:~/.dotfiles/tools
+
+export GPG_TTY=$TTY
