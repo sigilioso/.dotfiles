@@ -12,6 +12,16 @@ Desktop.ini
 *.pyc
 modd.conf
 debug.test
+
 # autoenv files
 .in
 .out
+
+# .venv folder
+.venv
+
+# go workspaces
+go.work*
+
+# terraform tfstates
+terraform.tfstate

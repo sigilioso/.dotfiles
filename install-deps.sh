@@ -55,6 +55,22 @@ install_autojump() {
   fi
 }
 
+install_zoxide() {
+  if [ -z "$(command -v zoxide)" ]; then
+    platform=$(uname);
+    if [[ $platform == 'Linux' ]]; then
+      if [[ -f /etc/redhat-release ]]; then
+        sudo yum install zoxide
+      fi
+      if [[ -f /etc/debian_version ]]; then
+        sudo apt-get install zoxide
+      fi
+    elif [[ $platform == 'Darwin' ]]; then
+      brew install zoxide
+    fi
+  fi
+}
+
 install_ripgrep() {
   # Test to see if rpgrep is installed
   if [ -z "$(command -v rg)" ]; then
