@@ -4,6 +4,7 @@
     default = current
 [push]
     default = current
+	autoSetupRemote = true # requires at least git 2.37.1
 [alias]
     co = checkout
     br = branch
